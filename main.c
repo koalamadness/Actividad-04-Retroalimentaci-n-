@@ -1,4 +1,14 @@
 #include <stdio.h>
+
+void mostrar(int n, char cadena[])
+{
+    for (size_t i = 0; i < n; i++)
+    {
+        printf("%s",cadena);
+    }
+
+}
+
 void capturar_enteros()
 {
     int enteros[5];
@@ -27,6 +37,8 @@ void capturar_enteros()
 
 int main(void) {
   int op;
+  char cadena[20];
+  int n;
   
   do 
   {
@@ -44,6 +56,13 @@ int main(void) {
             capturar_enteros();
             break;
         case 2:
+            printf("Escribe una cadena de hasta 20 caracteres: ");
+            fflush(stdin);
+            fgets(cadena, sizeof(cadena), stdin);
+            fflush(stdin);
+            printf("n: ");
+            scanf("%i", &n);
+            mostrar(n, cadena);
             break;
     }
 
