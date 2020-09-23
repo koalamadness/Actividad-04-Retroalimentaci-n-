@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "personaje.h"
 
 void mostrar(int n, char cadena[])
 {
@@ -45,6 +46,7 @@ int main(void) {
     printf("1) Capturar enteros\n");
     printf("2) Mostrar cadena n veces\n");
     printf("3) Agregar personajes\n");
+    printf("4) Mostrar personajes\n");
     printf("0) Salir\n");
     scanf("%d", &op);
 
@@ -63,6 +65,14 @@ int main(void) {
             printf("n: ");
             scanf("%i", &n);
             mostrar(n, cadena);
+            break;
+        case 3:
+            capturar_personajes();
+            break;
+        case 4:
+            mostrar_personajes();
+            break;
+        default:
             break;
     }
 
